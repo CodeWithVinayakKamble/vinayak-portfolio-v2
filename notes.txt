@@ -1,0 +1,44 @@
+Hero Section
+Heading: Hi, I am Vinayak
+Subheading: Aspiring Full Stack Developer on a journey to build real things for the web.
+
+About Section
+Heading: About Me
+Paragraph: I am a self-taught developer from India, currently learning web development from the ground up. I started with HTML and I am working my way through a structured full stack roadmap. I enjoy building clean, accessible, and well-structured web pages. When I am not coding I enjoy exploring new technologies and solving problems.
+Image: use any photo of yourself with proper alt text
+
+Skills Section
+Heading: Skills
+List items: HTML5, Semantic HTML, Web Accessibility, SEO Basics, W3C Validation, VS Code, Chrome DevTools
+
+Projects Section
+Heading: Projects
+Article 1:
+Title: Personal Portfolio Page
+Description: My first real HTML project. Built using pure HTML with no CSS. Focused on semantic structure, accessibility, and W3C validation.
+Article 2:
+Title: HTML Practice Pages
+Description: A collection of practice pages built while learning each step of HTML — forms, tables, lists, media, and semantic layouts.
+
+Education Section
+Heading: Education
+Table with three columns — Degree, Institution, Year
+Row 1: Full Stack Web Development, Self Taught via Structured Roadmap, 2025 — Present
+
+Contact Section
+Heading: Get in Touch
+Form fields: Full Name, Email Address, Subject, Message, Submit button
+
+Footer
+Text: Built with HTML by Vinayak — 2025
+Links: GitHub, LinkedIn, Twitter
+
+
+
+The Logic: Font Pairing
+Professional designers rarely use just one font style. A common "Formula" is:
+
+Headings: Poppins (Bold, weight 700)
+Body Text: Inter (Regular, weight 400)
+Fira Code
+
