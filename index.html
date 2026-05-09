@@ -26,14 +26,12 @@
 </head>
 
 <body>
+
+    <!-- Header -->
+
     <header class="site-header">
         <div class="logo">
-            <div class="logo__window-dots">
-                <span class="logo__dot logo__dot--red"></span>
-                <span class="logo__dot logo__dot--yellow"></span>
-                <span class="logo__dot logo__dot--green"></span>
-            </div>
-            <div class="logo__text">&lt; /_VK Portfolio &gt;</div>
+            <a href="#hero" class="logo__text">&lt; /_VK Portfolio &gt;</a>
         </div>
         <nav class="nav">
             <ul class="nav__list">
@@ -46,11 +44,34 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="hero">
-            <h1>Hi, I am Vinayak</h1>
-            <p>Aspiring Full Stack Developer on a journey to build real things for the web.</p>
-        </section>
+
+    <!-- Main -->
+
+    <main class="site-main">
+        <!-- Hero -->
+        <div id="hero" class="hero__wrapper">
+            <section class="hero">
+                <div class="hero__section-marker">
+                    <span class="hero__section-marker__dot hero__section-marker__dot--red"></span>
+                    <span class="hero__section-marker__dot hero__section-marker__dot--yellow"></span>
+                    <span class="hero__section-marker__dot hero__section-marker__dot--green"></span>
+                </div>
+                <div class="hero__content-body">
+                    <div class="hero__img-wrapper">
+                        <img class="hero__img" src="images/hero-img.png" alt="ghibli img">
+                    </div>
+                    <div class="hero__text-content-wrapper">
+                        <h1 class="hero__title">Hi, I am Vinayak </h1>
+                        <hr class="hero__text-content-divider">
+                        <p class="hero__description">
+                            Aspiring Full Stack Developer.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
         <section id="about">
             <h2>About Me</h2>
             <figure>
