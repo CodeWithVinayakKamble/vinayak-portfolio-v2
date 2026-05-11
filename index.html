@@ -26,30 +26,30 @@
 </head>
 
 <body>
+    <div class="layout">
+        <!-- Header -->
 
-    <!-- Header -->
+        <header class="site-header">
+            <div class="logo">
+                <a href="#hero" class="logo__text">&lt; /_VK Portfolio &gt;</a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#hero">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#education">Education</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <header class="site-header">
-        <div class="logo">
-            <a href="#hero" class="logo__text">&lt; /_VK Portfolio &gt;</a>
-        </div>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="#hero">Home</a></li>
-                <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
-                <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
-                <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
-                <li class="nav__item"><a class="nav__link" href="#education">Education</a></li>
-                <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Main -->
 
-    <!-- Main -->
+        <main class="site-main">
 
-    <main class="site-main">
-        <!-- Hero -->
-        <div id="hero" class="hero__wrapper">
+            <!-- Hero -->
             <section class="hero">
                 <div class="hero__section-marker">
                     <span class="hero__section-marker__dot hero__section-marker__dot--red"></span>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="hero__content-body">
                     <div class="hero__img-wrapper">
-                        <img class="hero__img" src="images/hero-img.png" alt="ghibli img">
+                        <img class="hero__img" src="images/hero-img.png" alt="ghibli-img">
                     </div>
                     <div class="hero__text-content-wrapper">
                         <h1 class="hero__title">Hi, I am Vinayak </h1>
@@ -70,117 +70,131 @@
                 </div>
             </section>
 
-        </div>
+            <!-- About -->
+            <section id="about">
+                <h2>About Me</h2>
+                <figure>
+                    <img src="" alt="This is the professional headshot of Vinayak">
+                    <figcaption>Vinayak Kamble &mdash; Aspiring Full Stack Developer</figcaption>
+                </figure>
+                <p>
+                    I am a self-taught developer from India, currently learning web development from the ground up with
+                    the
+                    help of various Freely available Resources including AI.I started with HTML and I am working my way
+                    through a structured full stack roadmap. I enjoy building clean, accessible, and well-structured web
+                    pages. When I am not coding I enjoy exploring new technologies and solving problems.
+                </p>
+            </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <figure>
-                <img src="images/self-img.jpg" alt="This is the professional headshot of Vinayak" height="300">
-                <figcaption>Vinayak Kamble &mdash; Aspiring Full Stack Developer</figcaption>
-            </figure>
-            <p>
-                I am a self-taught developer from India, currently learning web development from the ground up with the
-                help of various Freely available Resources including AI.I started with HTML and I am working my way
-                through a structured full stack roadmap. I enjoy building clean, accessible, and well-structured web
-                pages. When I am not coding I enjoy exploring new technologies and solving problems.
-            </p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
+            <!-- Skills -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>Semantic HTML</li>
+                    <li>Web Accessibility</li>
+                    <li>SEO Basics</li>
+                    <li>W3C Validation</li>
+                    <li>VS Code</li>
+                    <li>Chrome DevTools</li>
+                </ul>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <article>
+                    <header>
+                        <h3>Personal Portfolio Page</h3>
+                    </header>
+                    <p>
+                        My first real HTML project. Built using pure HTML with no CSS. Focused on semantic structure,
+                        accessibility, and W3C
+                        validation.
+                    </p>
+                </article>
+                <article>
+                    <header>
+                        <h3>HTML Practice Pages</h3>
+                    </header>
+                    <p>
+                        A collection of practice pages built while learning each step of HTML — forms, tables, lists,
+                        media, and semantic
+                        layouts
+                    </p>
+                </article>
+            </section>
+
+            <!-- Education -->
+            <section id="education">
+                <h2>Education</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <caption>Educational Journey</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Degree</th>
+                                <th scope="col">Institution</th>
+                                <th scope="col">Grades/Percentage</th>
+                                <th scope="col">Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SSC</td>
+                                <td>Chh. Shivaji University, Kolhapur</td>
+                                <td>89.40%</td>
+                                <td>2018</td>
+                            </tr>
+                            <tr>
+                                <td>HSC</td>
+                                <td>Chh. Shivaji University, Kolhapur</td>
+                                <td>72.15%</td>
+                                <td>2020</td>
+                            </tr>
+                            <tr>
+                                <td>BE - Information technology</td>
+                                <td>Mumbai University</td>
+                                <td>7.23 CGPI</td>
+                                <td>2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact">
+                <h2>Get in Touch</h2>
+                <form action="#" method="POST">
+                    <label for="username">Enter Your FullName :</label>
+                    <input type="text" id="username" name="username" placeholder="John Doe" required>
+
+                    <label for="usermail">Enter Your Mail :</label>
+                    <input type="email" id="usermail" name="usermail" placeholder="johndoe@gmail.com" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+
+                    <label for="message">Enter Your Message :</label>
+                    <textarea name="usermessage" id="message" rows="5" cols="10"
+                        placeholder="Write Your Message Here..." required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>Built with HTML by Vinayak — 2025</p>
             <ul>
-                <li>HTML</li>
-                <li>Semantic HTML</li>
-                <li>Web Accessibility</li>
-                <li>SEO Basics</li>
-                <li>W3C Validation</li>
-                <li>VS Code</li>
-                <li>Chrome DevTools</li>
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <article>
-                <header>
-                    <h3>Personal Portfolio Page</h3>
-                </header>
-                <p>
-                    My first real HTML project. Built using pure HTML with no CSS. Focused on semantic structure,
-                    accessibility, and W3C
-                    validation.
-                </p>
-            </article>
-            <article>
-                <header>
-                    <h3>HTML Practice Pages</h3>
-                </header>
-                <p>
-                    A collection of practice pages built while learning each step of HTML — forms, tables, lists,
-                    media, and semantic
-                    layouts
-                </p>
-            </article>
-        </section>
-        <section id="education">
-            <h2>Education</h2>
-            <table>
-                <caption>Educational Journey</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Degree</th>
-                        <th scope="col">Institution</th>
-                        <th scope="col">Grades/Percentage</th>
-                        <th scope="col">Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>SSC</td>
-                        <td>Chh. Shivaji University, Kolhapur</td>
-                        <td>89.40%</td>
-                        <td>2018</td>
-                    </tr>
-                    <tr>
-                        <td>HSC</td>
-                        <td>Chh. Shivaji University, Kolhapur</td>
-                        <td>72.15%</td>
-                        <td>2020</td>
-                    </tr>
-                    <tr>
-                        <td>BE - Information technology</td>
-                        <td>Mumbai University</td>
-                        <td>7.23 CGPI</td>
-                        <td>2025</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="contact">
-            <h2>Get in Touch</h2>
-            <form action="#" method="POST">
-                <label for="username">Enter Your FullName :</label>
-                <input type="text" id="username" name="username" placeholder="John Doe" required>
+        </footer>
 
-                <label for="usermail">Enter Your Mail :</label>
-                <input type="email" id="usermail" name="usermail" placeholder="johndoe@gmail.com" required>
-
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
-
-                <label for="message">Enter Your Message :</label>
-                <textarea name="usermessage" id="message" rows="5" cols="50" placeholder="Write Your Message Here..."
-                    required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>Built with HTML by Vinayak — 2025</p>
-        <ul>
-            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></li>
-            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        </ul>
-    </footer>
+    </div>
 </body>
 
 </html>
