@@ -50,18 +50,18 @@
         <main class="site-main">
 
             <!-- Hero -->
-            <section class="hero" id="hero">
-                <div class="hero__section-marker">
-                    <span class="hero__section-marker-dot hero__section-marker-dot--red"></span>
-                    <span class="hero__section-marker-dot hero__section-marker-dot--yellow"></span>
-                    <span class="hero__section-marker-dot hero__section-marker-dot--green"></span>
+            <section id="hero" class="hero theme-window" aria-labelledby="hero-section">
+                <div class="section-marker">
+                    <span class="section-marker-dot section-marker-dot--red"></span>
+                    <span class="section-marker-dot section-marker-dot--yellow"></span>
+                    <span class="section-marker-dot section-marker-dot--green"></span>
                 </div>
-                <div class="hero__content-body">
+                <div class="content-body hero__content-body">
                     <div class="hero__img-wrapper">
                         <img class="hero__img" src="images/hero-img.png" alt="ghibli-img">
                     </div>
                     <div class="hero__text-content-wrapper">
-                        <h1 class="hero__title">Hi, I am Vinayak </h1>
+                        <h1 class="hero__title" id="hero-section">Hi, I am Vinayak </h1>
                         <hr class="hero__text-content-divider">
                         <p class="hero__description">
                             Aspiring Full Stack Developer.
@@ -71,19 +71,27 @@
             </section>
 
             <!-- About -->
-            <section id="about">
-                <h2>About Me</h2>
-                <figure>
-                    <img src="#" alt="This is the professional headshot of Vinayak">
-                    <figcaption>Vinayak Kamble &mdash; Aspiring Full Stack Developer</figcaption>
-                </figure>
-                <p>
-                    I am a self-taught developer from India, currently learning web development from the ground up with
-                    the
-                    help of various Freely available Resources including AI.I started with HTML and I am working my way
-                    through a structured full stack roadmap. I enjoy building clean, accessible, and well-structured web
-                    pages. When I am not coding I enjoy exploring new technologies and solving problems.
-                </p>
+            <section id="about" class="about theme-window">
+                <div class="section-marker">
+                    <span class="section-marker-dot section-marker-dot--red"></span>
+                    <span class="section-marker-dot section-marker-dot--yellow"></span>
+                    <span class="section-marker-dot section-marker-dot--green"></span>
+                </div>
+                <div class="about__content-body content-body">
+                    <h2 class="section__title">About Me</h2>
+                    <div class="about__img-wrapper">
+                        <img class="about__profile-img" src="images/self-img-pro-office.png"
+                            alt="Vinayak's professional headshot">
+                    </div>
+                    <p class="about__profile-description">
+                        I am a self-taught developer from India, currently learning web development from the ground up
+                        with the help of various Freely available Resources including AI.I started with HTML and I am
+                        working my way through a
+                        structured full stack roadmap. I enjoy building clean, accessible, and well-structured web
+                        pages. When I am not coding I
+                        enjoy exploring new technologies and solving problems.
+                    </p>
+                </div>
             </section>
 
             <!-- Skills -->

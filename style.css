@@ -20,6 +20,9 @@
   /* border*/
   --theme-border: 1px solid var(--accent-secondary);
 
+  /* section - title after before content */
+  --section-title-content: 2px solid var(--accent-secondary);
+
   /* Font-Family */
   --poppins-headings: "Poppins", sans-serif;
   --inter-body: "Inter", sans-serif;
@@ -54,7 +57,7 @@
   --border-radius-lg: 1rem;
 
   /* scrolling-offset */
-  --scroll-offset: 10.675rem;
+  --scroll-offset: 11.175rem;
 }
 
 /* ----- Basic Reset ---- */
@@ -85,6 +88,7 @@ textarea {
 }
 
 label {
+  display: inline-block;
   inline-size: 100%;
 }
 
@@ -147,6 +151,7 @@ body {
   background-color: var(--bg-dark);
 }
 
+/* ---- layout setting ---- */
 .layout {
   inline-size: min(90%, 1300px);
   margin-inline: auto;
@@ -169,6 +174,48 @@ body {
   min-inline-size: 0;
 }
 
+/* ---- Section-setting ---- */
+
+.theme-window {
+  background-color: var(--bg-surface);
+  border: var(--theme-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.section-marker {
+  display: flex;
+  gap: var(--pad-gap-margin-sm);
+  background-color: var(--bg-section-marker);
+}
+
+.section-marker-dot {
+  display: block;
+  inline-size: 0.9rem;
+  block-size: 0.9rem;
+  border-radius: 50%;
+}
+.section-marker-dot--red {
+  background-color: var(--dot-red);
+}
+.section-marker-dot--yellow {
+  background-color: var(--dot-yellow);
+}
+.section-marker-dot--green {
+  background-color: var(--dot-green);
+}
+
+.section-marker,
+.content-body {
+  padding: 1rem;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-margin-md);
+}
+
 /* * {
   outline: 1px solid red !important;
 } */
@@ -182,11 +229,11 @@ body {
   inset-inline-start: 0;
   z-index: 99;
 
-  width: 100%;
+  inline-size: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--pad-gap-margin-md);
+  gap: var(--pad-gap-margin-lg);
   padding-block: var(--pad-gap-margin-md);
 
   background-color: var(--bg-dark);
@@ -234,11 +281,12 @@ body {
   block-size: 3px;
   inline-size: 0;
 
-  background-color: var(--accent-primary);
+  background-color: var(--accent-secondary);
 
   transition: inline-size 0.3s ease-in-out;
 }
 
+/* ---- nav_link hover and clicked effect ---- */
 .nav__link:hover::after,
 .nav__link:focus::after,
 .nav__link:active::after {
@@ -248,57 +296,13 @@ body {
 /* ---- site-Main ---- */
 .site-main {
   grid-area: main;
+
   display: flex;
   flex-direction: column;
   gap: var(--pad-gap-margin-md);
 }
 
-/* ---- main > hero ---- */
-.hero {
-  background-color: var(--bg-surface);
-  border: var(--theme-border);
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-}
-
-.hero__section-marker,
-.hero__content-body {
-  padding: 1rem;
-}
-
-/* main > hero > section - marker */
-.hero__section-marker {
-  display: flex;
-  gap: var(--pad-gap-margin-sm);
-  background-color: var(--bg-section-marker);
-  padding-block: var(--pad-gap-margin-md);
-}
-
-.hero__section-marker-dot {
-  display: block;
-  inline-size: 0.9rem;
-  block-size: 0.9rem;
-  border-radius: 50%;
-}
-
-.hero__section-marker-dot--red {
-  background-color: var(--dot-red);
-}
-
-.hero__section-marker-dot--yellow {
-  background-color: var(--dot-yellow);
-}
-.hero__section-marker-dot--green {
-  background-color: var(--dot-green);
-}
-
-/* ---- hero > content-body --- */
-.hero__content-body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--pad-gap-margin-md);
-}
-
+/* ---- main > hero > img + content ---- */
 .hero__img {
   inline-size: 18.125rem;
   margin-inline: auto;
@@ -359,12 +363,44 @@ body {
   border-radius: 2px;
 }
 
+/* ---- main > about ---- */
+.section__title {
+  display: flex;
+  align-items: center;
+  gap: var(--pad-gap-margin-sm);
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* border-block-end: var(--theme-border); */
+}
+
+.section__title::before,
+.section__title::after {
+  content: "";
+  flex: 1;
+  block-size: 5px;
+  border-block-start: var(--section-title-content);
+  border-block-end: var(--section-title-content);
+}
+
+/* ---- about > profile-img ---- */
+.about__profile-img {
+  block-size: 15rem;
+  inline-size: 15rem;
+  margin-inline: auto;
+  border-radius: 50%;
+  border: 3px solid var(--accent-secondary);
+  object-fit: cover;
+}
+
 /* ---- site-footer ---- */
 .site-footer {
   grid-area: footer;
 }
 
 /* ---- Media Queries ---- */
+
+/* ---- Media Querie for screen size 768px ---- */
 @media screen and (min-width: 48em) {
   :root {
     --scroll-offset: 4.6rem;
@@ -396,9 +432,16 @@ body {
   .hero__img {
     inline-size: 23.4375rem; /* 375px */
   }
+
+  /* ---- main > about ---  */
+  .section__title {
+    margin-inline: auto;
+    inline-size: 100%;
+    max-inline-size: 50%;
+  }
 }
 
-/* ---- media query screen size : 1024px */
+/* ---- media query screen size : 1024px ---- */
 
 @media screen and (min-width: 64em) {
   :root {
@@ -427,7 +470,7 @@ body {
     margin-inline: auto;
 
     max-block-size: 100%;
-    
-    object-fit: contain; /* Keep the proportions perfect */
+
+    object-fit: contain;
   }
 }
