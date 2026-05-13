@@ -162,7 +162,7 @@ body {
     "main"
     "footer";
   grid-template-rows: auto auto auto;
-  row-gap: var(--pad-gap-margin-md);
+  row-gap: var(--pad-gap-margin-lg);
 
   /* border: var(--theme-border); */
 }
