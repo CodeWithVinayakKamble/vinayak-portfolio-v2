@@ -18,10 +18,17 @@
   --text-muted: #a0a0a0; /* Secondary/De-emphasized Text */
 
   /* border*/
-  --theme-border: 1px solid var(--accent-secondary);
+  --theme-border: 0.0625rem solid var(--accent-secondary);
 
   /* section - title after before content */
-  --section-title-content: 2px solid var(--accent-secondary);
+  --section-title-content: 0.125rem solid var(--accent-secondary);
+
+  /* img-shadows */
+  --profile-img-shadow: 0 0 1.875rem var(--bg-section-marker);
+  --hero-img-shadow: 0.25rem 0.125rem 0.625rem var(--bg-section-marker);
+
+  /* text-shadow */
+  --logo-shadow: 0 0 0.2em var(--accent-primary);
 
   /* Font-Family */
   --poppins-headings: "Poppins", sans-serif;
@@ -36,14 +43,20 @@
   --fs-xl: 2rem; /* 32px */
 
   /* Fluid typo */
+  /* 14px , 18px  */
+  --fluid-body-text: clamp(var(--fs-sm), 3vw, var(--fs-md));
+
   /* 16 , 16.5 , 18 */
   --fluid-logo: clamp(var(--fs-base), 2.15vw, var(--fs-md));
+
   /* 14 , 14.5 ,16 */
   --fluid-nav-link: clamp(var(--fs-sm), 1.89vw, var(--fs-base));
-  /* 18px , 24px */
+
+  /* 18px , 27px, 32px */
   --fluid-hero-title: clamp(var(--fs-md), 3.5vw, var(--fs-xl));
-  /* 14px , 18px  */
-  --fluid-hero-desc: clamp(var(--fs-sm), 3vw, var(--fs-md));
+
+  /* 16px, 23px , 24px */
+  --fluid-section-title: clamp(var(--fs-base), 3vw, var(--fs-lg));
 
   /* padding-gap-margin */
   --pad-gap-margin-sm: 0.5rem;
@@ -106,7 +119,7 @@ button {
 
 table {
   inline-size: 100%;
-  min-inline-size: 500px;
+  min-inline-size: 30rem;
   border-collapse: collapse;
 }
 
@@ -162,7 +175,7 @@ body {
     "main"
     "footer";
   grid-template-rows: auto auto auto;
-  row-gap: var(--pad-gap-margin-lg);
+  row-gap: var(--pad-gap-margin-md);
 
   /* border: var(--theme-border); */
 }
@@ -174,7 +187,7 @@ body {
   min-inline-size: 0;
 }
 
-/* ---- Section-setting ---- */
+/* ---- Section setting ---- */
 
 .theme-window {
   background-color: var(--bg-surface);
@@ -216,6 +229,25 @@ body {
   gap: var(--pad-gap-margin-md);
 }
 
+.section__title {
+  display: flex;
+  align-items: center;
+  gap: var(--pad-gap-margin-sm);
+
+  font-size: var(--fluid-section-title);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section__title::before,
+.section__title::after {
+  content: "";
+  flex: 1;
+  block-size: 5px;
+  border-block-start: var(--section-title-content);
+  border-block-end: var(--section-title-content);
+}
+
 /* * {
   outline: 1px solid red !important;
 } */
@@ -248,11 +280,10 @@ body {
   font-family: var(--jetbrains-mono-logo);
   color: var(--accent-primary);
 
-  text-shadow: 0 0 3px var(--accent-primary);
+  text-shadow: var(--logo-shadow);
 }
 
 /* ---- header > nav__links ---- */
-
 .nav__list {
   display: flex;
   justify-content: center;
@@ -278,7 +309,7 @@ body {
   inset-block-end: -5px;
   inset-inline-start: 0;
 
-  block-size: 3px;
+  block-size: 0.1875rem;
   inline-size: 0;
 
   background-color: var(--accent-secondary);
@@ -308,7 +339,7 @@ body {
   margin-inline: auto;
 
   border-radius: var(--border-radius-sm);
-  box-shadow: 4px 2px 10px var(--bg-section-marker);
+  box-shadow: var(--hero-img-shadow);
 }
 
 .hero__text-content-wrapper {
@@ -349,7 +380,7 @@ body {
 }
 
 .hero__description {
-  font-size: var(--fluid-hero-desc);
+  font-size: var(--fluid-body-text);
 }
 
 .hero__text-content-divider {
@@ -364,33 +395,70 @@ body {
 }
 
 /* ---- main > about ---- */
-.section__title {
-  display: flex;
-  align-items: center;
-  gap: var(--pad-gap-margin-sm);
 
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  /* border-block-end: var(--theme-border); */
-}
-
-.section__title::before,
-.section__title::after {
-  content: "";
-  flex: 1;
-  block-size: 5px;
-  border-block-start: var(--section-title-content);
-  border-block-end: var(--section-title-content);
-}
-
-/* ---- about > profile-img ---- */
+/* ---- main >  about > profile-img ---- */
 .about__profile-img {
   block-size: 15rem;
   inline-size: 15rem;
   margin-inline: auto;
+
   border-radius: 50%;
   border: 3px solid var(--accent-secondary);
   object-fit: cover;
+
+  box-shadow: var(--profile-img-shadow);
+}
+
+/* ---- about > profile description ---- */
+.author {
+  color: var(--accent-primary);
+}
+.about__profile-description {
+  font-size: var(--fluid-body-text);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* ---- about > profile stats ---- */
+.about__profile-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-margin-md);
+}
+
+.about__profile-stats-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pad-gap-margin-sm);
+}
+
+.about__profile-stats-title::before,
+.about__profile-stats-title::after {
+  content: "";
+  flex: 1;
+  block-size: 2px;
+  background-color: var(--accent-secondary);
+  border-radius: 2px;
+}
+
+/* ---- about > profile stats list ---- */
+.about__profile-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-margin-sm);
+  align-items: start;
+}
+.profile-stats-list__item {
+  font-size: var(--fluid-body-text);
+}
+
+.profile-stats-list__item::before {
+  content: ">";
+  color: var(--accent-primary);
+  font-family: var(--jetbrains-mono-logo);
+  font-weight: bold;
+  margin-inline-end: var(--pad-gap-margin-sm);
 }
 
 /* ---- site-footer ---- */
@@ -402,12 +470,12 @@ body {
 
 /* ---- Media Querie for screen size 768px ---- */
 @media screen and (min-width: 48em) {
+  /* ---- root ---- */
   :root {
     --scroll-offset: 4.6rem;
   }
 
   /* ---- header ---- */
-
   .site-header {
     flex-direction: row;
     justify-content: space-between;
@@ -433,17 +501,25 @@ body {
     inline-size: 23.4375rem; /* 375px */
   }
 
-  /* ---- main > about ---  */
+  /* ---- section setting ----  */
   .section__title {
-    margin-inline: auto;
     inline-size: 100%;
-    max-inline-size: 50%;
+    max-inline-size: 60%;
+    margin-inline: auto;
+  }
+
+  /* ---- main > about > profile stats ---- */
+  .about__profile-stats-title,
+  .about__profile-stats-list {
+    inline-size: 100%;
+    max-inline-size: 90%;
+    margin-inline: auto;
   }
 }
 
 /* ---- media query screen size : 1024px ---- */
-
 @media screen and (min-width: 64em) {
+  /* ---- root ---- */
   :root {
     --scroll-offset: 4.7rem;
   }
@@ -468,9 +544,20 @@ body {
     inline-size: auto;
     max-inline-size: 90%;
     margin-inline: auto;
-
     max-block-size: 100%;
 
     object-fit: contain;
+  }
+
+  /* ---- main > about ---- */
+  
+  /* .about__content-body{
+    inline-size: 100%;
+    max-inline-size: 80%;
+    margin-inline: auto;
+  } */
+  .about__profile-stats-title,
+  .about__profile-stats-list {
+    max-inline-size: 60%;
   }
 }
