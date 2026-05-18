@@ -547,16 +547,12 @@ body {
 /* ---- main > skill end ---- */
 
 /* ---- main > project start ---- */
-
 /* ---- main > project end ---- */
-
-/* ---- site-main end ---- */
 
 /* ---- site-footer start ---- */
 .site-footer {
   grid-area: footer;
 }
-
 /* ---- site-footer end ---- */
 
 /* ---- Media Queries start ---- */
@@ -639,8 +635,8 @@ body {
   }
 
   /* ---- main > skills ---- */
-  .skills_list {
-    max-inline-size: 80%;
+  .skills__list {
+    max-inline-size: 70%;
     margin-inline: auto;
   }
   .skills__content-body {
