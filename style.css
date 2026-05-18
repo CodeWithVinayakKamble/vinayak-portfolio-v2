@@ -3,6 +3,7 @@
   --bg-dark: #212121; /* Main Background */
   --bg-surface: #323232; /* Section/Card Background */
   --bg-section-marker: #1a1a1a; /* section-marker-bg */
+  --bg-icon-img: #3b3a3a; /* icon and img bg */
 
   /* Primary and Secondary */
   --accent-primary: #14ffec; /* Bright Cyan (Buttons/Links) */
@@ -38,6 +39,8 @@
   /* Fluid imges */
   --fluid-hero-img: clamp(15rem, 40vw, 35rem);
   --fluid-profile-img: clamp(12rem, 30vw, 18rem);
+  --fluid-skills-icon: clamp(1.5rem, 5vw, 3rem);
+  --fluid-skills-img: clamp(2rem, 5vw, 4rem);
 
   /* Font Sizes */
   --fs-sm: 0.875rem; /* 14px */
@@ -64,6 +67,9 @@
 
   /* 15px , 16.5 , 18 */
   --fluid-section-sub-title-h3: clamp(0.9375rem, 2.2vw, var(--fs-md));
+
+  /* 15px , 16 , 17 */
+  --fluid-skills-icon-tag: clamp(0.9375rem, 2vw, 1.0625rem);
 
   /* padding-gap-margin */
   --pad-gap-margin-sm: 0.5rem;
@@ -275,8 +281,6 @@ body {
   align-items: center;
 
   inline-size: 100%;
-  max-inline-size: 90%;
-  margin-inline: auto;
   gap: var(--pad-gap-margin-sm);
 
   font-size: var(--fluid-section-sub-title-h3);
@@ -316,7 +320,7 @@ body {
   border-block-end: var(--theme-border);
 }
 
-/* ---- header > logo ---- */
+/*  logo */
 .logo__text {
   font-size: var(--fluid-logo);
   font-weight: 800;
@@ -326,7 +330,7 @@ body {
   text-shadow: var(--logo-shadow);
 }
 
-/* ---- header > nav__list ~ nav__links ---- */
+/*  nav__list ~ nav__links */
 .nav__list {
   display: flex;
   justify-content: center;
@@ -360,7 +364,7 @@ body {
   transition: inline-size 0.3s ease-in-out;
 }
 
-/* ---- nav_link hover and clicked effect ---- */
+/* nav_link hover and clicked effect */
 .nav__link:hover::after,
 .nav__link:focus::after,
 .nav__link:active::after {
@@ -378,8 +382,12 @@ body {
 }
 
 /* ---- main > hero start ---- */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
 
-/* ---- main > hero > img + content ---- */
+/* hero > img + content */
 .hero__img {
   inline-size: clamp(15rem, 40vw, 35rem);
   aspect-ratio: 1 / 1;
@@ -432,7 +440,6 @@ body {
 /* ---- main > hero end ---- */
 
 /* ---- main > about start ---- */
-/* ---- main >  about > profile-img ---- */
 .about__profile-img {
   inline-size: var(--fluid-profile-img);
   aspect-ratio: 1 / 1;
@@ -445,34 +452,30 @@ body {
   box-shadow: var(--profile-img-shadow);
 }
 
-/* ---- about > profile description ---- */
+/* ---- main > about start ---- */
+/* profile description */
 .author {
   color: var(--accent-primary);
 }
 
-.about__sub-content-body-wrapper {
+.about__profile {
   display: flex;
   flex-direction: column;
   gap: var(--pad-gap-margin-md);
 }
 
-.about__sub-content-body-col-1 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--pad-gap-margin-md);
-}
-
-.about__profile-description {
-  font-size: var(--fluid-body-text);
-  text-align: center;
-  line-height: 1.7;
-}
-
-/* ---- about > profile-stats list ---- */
-.section__sub-title-h3-about-profile-stats {
+.section__sub-title-h3-about-bio,
+.section__sub-title-h3-about-profile-stats,
+.about__profile-bio-intro {
   margin-block-end: var(--pad-gap-margin-md);
 }
 
+.about__profile-bio-intro,
+.about__profile-bio-history {
+  text-align: center;
+}
+
+/* profile-stats list */
 .about__profile-stats-list {
   display: flex;
   flex-direction: column;
@@ -494,8 +497,58 @@ body {
 /* ---- main > about end ---- */
 
 /* ---- main > skill start ---- */
+.skills__category-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-margin-lg);
+}
 
+.skills__category-title {
+  font-size: var(--fluid-section-sub-title-h3);
+  max-inline-size: 90%;
+  margin-inline: auto;
+  margin-block-end: var(--pad-gap-margin-sm);
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: var(--pad-gap-margin-sm);
+}
+
+.skills__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--pad-gap-margin-sm);
+  padding: var(--pad-gap-margin-md);
+
+  border: var(--theme-border);
+  background-color: var(--bg-icon-img);
+  border-radius: var(--border-radius-lg);
+}
+
+.skills__img {
+  inline-size: var(--fluid-skills-img);
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.skills__icon {
+  color: var(--accent-primary);
+  font-size: var(--fluid-skills-icon);
+}
+
+.skills__tag {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--fluid-skills-icon-tag);
+}
 /* ---- main > skill end ---- */
+
+/* ---- main > project start ---- */
+
+/* ---- main > project end ---- */
 
 /* ---- site-main end ---- */
 
@@ -547,12 +600,13 @@ body {
     --scroll-offset: 4.7rem;
   }
 
-  /* main > hero */
-  .hero {
-    display: flex;
-    flex-direction: column;
+  /* common setting */
+  .section-marker,
+  .content-body {
+    padding-inline: var(--pad-gap-margin-lg);
   }
 
+  /* ---- main > hero ---- */
   .hero__content-body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -564,29 +618,38 @@ body {
   }
 
   /* ---- main > about ---- */
-  .about__sub-content-body-wrapper {
+  .about__profile {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--pad-gap-margin-md);
-    padding: var(--pad-gap-margin-md);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--pad-gap-margin-lg);
   }
 
-  .about__sub-content-body-col-2,
-  .about__sub-content-body-col-1 {
-    border: var(--theme-border);
+  .about__profile-description,
+  .about__profile-stats {
     padding: var(--pad-gap-margin-lg);
-    border-radius: var(--border-radius-lg);
   }
 
-  .about__profile-description {
-    inline-size: 100%;
+  .about__profile-bio-intro {
+    margin-block-end: var(--pad-gap-margin-sm);
+  }
+
+  .section__sub-title-h3-about-bio,
+  .section__sub-title-h3-about-profile-stats {
+    margin-block-end: var(--pad-gap-margin-md);
+  }
+
+  /* ---- main > skills ---- */
+  .skills_list {
     max-inline-size: 80%;
     margin-inline: auto;
   }
-
-  .about__profile-stats-list {
-    margin-inline: auto;
-    inline-size: 100%;
-    max-inline-size: 80%;
+  .skills__content-body {
+    padding-block: var(--pad-gap-margin-xl);
+  }
+  .skills__category-title {
+    max-inline-size: 50%;
+  }
+  .skills__category-container {
+    gap: var(--pad-gap-margin-xl);
   }
 }
