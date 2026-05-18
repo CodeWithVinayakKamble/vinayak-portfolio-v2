@@ -44,8 +44,7 @@
                     <li class="nav__item"><a class="nav__link" href="#hero">Home</a></li>
                     <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
                     <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#education">Education</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#project">Projects</a></li>
                     <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -173,7 +172,7 @@
                     <span class="section-marker-dot section-marker-dot--yellow"></span>
                     <span class="section-marker-dot section-marker-dot--green"></span>
                 </div>
-                
+
                 <div class="skills__content-body content-body">
 
                     <h2 class="section__title-h2" id="skills-section">Skills</h2>
@@ -246,65 +245,275 @@
             </section>
 
             <!-- Projects -->
-            <section id="projects">
-                <h2>Projects</h2>
-                <article>
-                    <header>
-                        <h3>Personal Portfolio Page</h3>
-                    </header>
-                    <p>
-                        My first real HTML project. Built using pure HTML with no CSS. Focused on semantic structure,
-                        accessibility, and W3C
-                        validation.
-                    </p>
-                </article>
-                <article>
-                    <header>
-                        <h3>HTML Practice Pages</h3>
-                    </header>
-                    <p>
-                        A collection of practice pages built while learning each step of HTML — forms, tables, lists,
-                        media, and semantic
-                        layouts
-                    </p>
-                </article>
-            </section>
+            <section id="project" class="project theme-window" aria-labelledby="project-section">
 
-            <!-- Education -->
-            <section id="education">
-                <h2>Education</h2>
-                <div class="table-wrapper">
-                    <table>
-                        <caption>Educational Journey</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Degree</th>
-                                <th scope="col">Institution</th>
-                                <th scope="col">Grades/Percentage</th>
-                                <th scope="col">Year</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>SSC</td>
-                                <td>Chh. Shivaji University, Kolhapur</td>
-                                <td>89.40%</td>
-                                <td>2018</td>
-                            </tr>
-                            <tr>
-                                <td>HSC</td>
-                                <td>Chh. Shivaji University, Kolhapur</td>
-                                <td>72.15%</td>
-                                <td>2020</td>
-                            </tr>
-                            <tr>
-                                <td>BE - Information technology</td>
-                                <td>Mumbai University</td>
-                                <td>7.23 CGPI</td>
-                                <td>2025</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="section-marker">
+                    <span class="section-marker-dot section-marker-dot--red"></span>
+                    <span class="section-marker-dot section-marker-dot--yellow"></span>
+                    <span class="section-marker-dot section-marker-dot--green"></span>
+                </div>
+
+
+                <div class="content-body project__content-body">
+                    <h2 id="project-section" class="section__title-h2 project__section-title">Builds</h2>
+
+                    <div class="project__layout-built-in-stats">
+                        <h3 class="section__sub-title-h3 project__section-sub-title-h3">Layouts built with</h3>
+                        <ul class="project__layout-built-in-list">
+                            <li class="project__layout-built-in-list-item">Semantic HTML5</li>
+                            <li class="project__layout-built-in-list-item">Vanilla CSS</li>
+                            <li class="project__layout-built-in-list-item">CSS Custom Properties</li>
+                            <li class="project__layout-built-in-list-item">Strict BEM Naming Convention</li>
+                            <li class="project__layout-built-in-list-item">Css Logical Properties</li>
+                            <li class="project__layout-built-in-list-item">Mobile-First Workflow</li>
+                            <li class="project__layout-built-in-list-item">W3C HTML Validated</li>
+                            <li class="project__layout-built-in-list-item">W3C CSS Validated</li>
+                            <li class="project__layout-built-in-list-item">Modern CSS Math Functions (clamp(), min())
+                            </li>
+                        </ul>
+                    </div>
+
+                    <aside class="project__notification-note">
+                        <i class="fa-solid fa-circle-info notification-note__icon"></i>
+                        <p class="notification-note__text">
+                            <strong class="notification-note__text--strong">Note:</strong> The projects listed below are
+                            carefully selected challenges from
+                            Frontend Mentor, built from scratch to practice modern layout architectures and
+                            pixel-perfect design.
+                        </p>
+                    </aside>
+
+
+                    <div class="project__wrapper">
+
+                        <!-- card-1 -->
+                        <article class="project-card">
+
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Product Preview Card</h4>
+                            </header>
+
+                            <div class="project-card__main-content-wrapper">
+
+                                <div class="project-card__img-wrapper">
+                                    <img class="project-card__img" src="images/product-preview-card.png"
+                                        alt="Screenshot of the Product Preview Card challenge, featuring a Gabrielle Chanel perfume bottle next to a product description, pricing, and an 'Add to Cart' button.">
+                                </div>
+
+                                <p class="project-card__project-description">
+                                    A responsive e-commerce product component built with a mobile-first approach.
+                                    Features
+                                    picture elements for art direction, fluid typography, and CSS flexbox for optimal
+                                    alignment.
+                                </p>
+
+                            </div>
+
+                            <footer class="project-card__footer">
+                                <ul class="project-card__footer-list">
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://github.com/CodeWithVinayakKamble/frontend-mentor-product-preview-card-component"
+                                            class="project-card__link project-card__link--code"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i class="fa-brands fa-github project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Get Code</span>
+                                        </a>
+                                    </li>
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://codewithvinayakkamble.github.io/frontend-mentor-product-preview-card-component/"
+                                            class="project-card__link project-card__link--live"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i
+                                                class="fa-solid fa-arrow-up-right-from-square project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Preview</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+
+                        <!-- card-2 -->
+                        <article class="project-card">
+
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Recipe page</h4>
+                            </header>
+
+                            <div class="project-card__main-content-wrapper">
+                                <div class="project-card__img-wrapper">
+                                    <img class="project-card__img" src="images/recipe-page.png"
+                                        alt="Screenshot of the Recipe Page challenge, displaying a 'Simple Omelette' recipe complete with a food image, preparation times, ingredient lists, and a nutrition table.">
+                                </div>
+
+                                <p class="project-card__project-description">
+                                    A typography-driven component focusing on semantic HTML structure. Features complex
+                                    nested lists, an accessible nutrition data table, and precise CSS spacing for
+                                    optimal readability.
+                                </p>
+
+                            </div>
+
+                            <footer class="project-card__footer">
+                                <ul class="project-card__footer-list">
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://github.com/CodeWithVinayakKamble/frontend-mentor-recipe-page"
+                                            class="project-card__link project-card__link--code"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i class="fa-brands fa-github project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Get Code</span>
+                                        </a>
+                                    </li>
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://codewithvinayakkamble.github.io/frontend-mentor-recipe-page/"
+                                            class="project-card__link project-card__link--live"
+                                            rel="noopener noreferrer" target="_blank">
+
+                                            <i
+                                                class="fa-solid fa-arrow-up-right-from-square project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Preview</span>
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+
+                        <!-- card-3 -->
+                        <article class="project-card">
+
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Testimonial Grid</h4>
+                            </header>
+
+                            <div class="project-card__main-content-wrapper">
+                                <div class="project-card__img-wrapper">
+                                    <img class="project-card__img" src="images/testimonial-grid.png"
+                                        alt="Screenshot of the Frontend Mentor Testimonials Grid challenge, showing five different colored review cards arranged in a complex, multi-column CSS grid.">
+                                </div>
+
+                                <p class="project-card__project-description">
+                                    An advanced layout component built using CSS Grid Architecture. Showcases complex
+                                    grid-template-areas, responsive
+                                    breakpoints, and meticulous management of card spans and overlapping elements.
+                                </p>
+
+                            </div>
+
+                            <footer class="project-card__footer">
+                                <ul class="project-card__footer-list">
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://github.com/CodeWithVinayakKamble/frontend-mentor-testimonials-grid"
+                                            class="project-card__link project-card__link--code"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i class="fa-brands fa-github project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Get Code</span>
+                                        </a>
+                                    </li>
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://codewithvinayakkamble.github.io/frontend-mentor-testimonials-grid/"
+                                            class="project-card__link project-card__link--live"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i
+                                                class="fa-solid fa-arrow-up-right-from-square project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Preview</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+
+                        <!-- card-4 -->
+                        <article class="project-card">
+
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Four Card Section</h4>
+                            </header>
+
+                            <div class="project-card__main-content-wrapper">
+                                <div class="project-card__img-wrapper">
+                                    <img class="project-card__img" src="images/four-card-section.png"
+                                        alt="Screenshot of the Four Card Feature Section challenge, showing four white cards arranged in a cross layout with colored top borders.">
+                                </div>
+
+                                <p class="project-card__project-description">
+                                    A complex CSS layout challenge utilizing advanced Grid or Flexbox positioning.
+                                    Showcases the ability to create
+                                    overlapping, cross-axis card alignments while maintaining perfect responsiveness on
+                                    mobile.
+                                </p>
+
+                            </div>
+
+                            <footer class="project-card__footer">
+                                <ul class="project-card__footer-list">
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://github.com/CodeWithVinayakKamble/frontend-mentor-four-card-feature-section"
+                                            class="project-card__link project-card__link--code"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i class="fa-brands fa-github project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Get Code</span>
+                                        </a>
+                                    </li>
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://codewithvinayakkamble.github.io/frontend-mentor-four-card-feature-section/"
+                                            class="project-card__link project-card__link--live"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i
+                                                class="fa-solid fa-arrow-up-right-from-square project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Preview</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+
+
+                        <!-- card-5 -->
+                        <article class="project-card">
+
+                            <header class="project-card__header">
+                                <h4 class="project-card__title">Simple Portfolio using HTML/CSS</h4>
+                            </header>
+
+                            <div class="project-card__main-content-wrapper">
+                                <div class="project-card__img-wrapper">
+                                    <img class="project-card__img" src="images/simple-portfolio.png"
+                                        alt="Screenshot of my personal developer portfolio featuring a dark terminal-inspired theme.">
+                                </div>
+
+                                <p class="project-card__project-description">
+                                    A fully responsive personal portfolio engineered with vanilla HTML5 and CSS3.
+                                    Features a robust CSS variable
+                                    architecture, fluid typography using clamp() functions, and a strict mobile-first
+                                    BEM methodology for maintainable code.
+                                </p>
+
+                            </div>
+
+                            <footer class="project-card__footer">
+                                <ul class="project-card__footer-list">
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://github.com/CodeWithVinayakKamble/vinayak-portfolio-v2"
+                                            class="project-card__link project-card__link--code"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i class="fa-brands fa-github project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Get Code</span>
+                                        </a>
+                                    </li>
+                                    <li class="project-card__footer-list-item">
+                                        <a href="https://codewithvinayakkamble.github.io/vinayak-portfolio-v2/"
+                                            class="project-card__link project-card__link--live"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <i
+                                                class="fa-solid fa-arrow-up-right-from-square project-card__link-icon"></i>
+                                            <span class="project-card__link-text">Preview</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </article>
+
+                    </div>
                 </div>
             </section>
 
