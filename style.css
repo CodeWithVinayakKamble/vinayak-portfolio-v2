@@ -36,13 +36,15 @@
   --inter-body: "Inter", sans-serif;
   --jetbrains-mono-logo: "JetBrains Mono", monospace;
 
-  /* Fluid imges */
+  /* Fluid imges and icons*/
   --fluid-hero-img: clamp(15rem, 40vw, 35rem);
   --fluid-profile-img: clamp(12rem, 30vw, 18rem);
   --fluid-skills-icon: clamp(1.5rem, 5vw, 3rem);
   --fluid-skills-img: clamp(2rem, 5vw, 4rem);
+  --fluid-contact-social-icon: clamp(1.2rem, 3vw, 2rem);
 
   /* Font Sizes */
+  --fs-ex-sm: 0.75rem;
   --fs-sm: 0.875rem; /* 14px */
   --fs-base: 1rem; /* 16px */
   --fs-md: 1.125rem; /* 18px */
@@ -71,8 +73,14 @@
   /* 15px , 16 , 17 */
   --fluid-skills-icon-tag: clamp(0.9375rem, 2vw, 1.0625rem);
 
-  /* 14,15,16  */
+  /* 14px ,15px ,16px   */
   --fluid-project-card-text-content: clamp(var(--fs-sm), 2vw, var(--fs-base));
+
+  /* 14px ,15px ,16px   */
+  --fluid-input-textarea-text: clamp(var(--fs-sm), 2vw, var(--fs-base));
+
+  /*12,16  */
+  --fluid-footer-text: clamp(var(--fs-ex-sm), 1.5vw, var(--fs-base));
 
   /* padding-gap-margin */
   --pad-gap-margin-sm: 0.5rem;
@@ -128,20 +136,7 @@ button {
   font-size: inherit;
 }
 
-.table-wrapper {
-  inline-size: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-table {
-  inline-size: 100%;
-  min-inline-size: 30rem;
-  border-collapse: collapse;
-}
-
-ul,
-ol {
+ul {
   list-style: none;
 }
 
@@ -184,7 +179,6 @@ body {
 /* ----- Global Basic Reset end ---- */
 
 /* ---- layout setting start ---- */
-
 .layout {
   inline-size: min(90%, 1300px);
   margin-inline: auto;
@@ -606,6 +600,7 @@ body {
   flex-direction: column;
   gap: var(--pad-gap-margin-lg);
 }
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -647,9 +642,17 @@ body {
   transform: scale(1.2);
 }
 
+.project-card__img:active {
+  transform: scale(1.05);
+}
+
 .project-card__footer-list {
   display: flex;
   justify-content: space-evenly;
+}
+
+.project-card__footer-list-item--portfolio-preview {
+  display: none;
 }
 
 .project-card__link-icon {
@@ -658,10 +661,138 @@ body {
 
 /* ---- main > project end ---- */
 
+/* main > contact start */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-margin-lg);
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-margin-sm);
+}
+
+.contact__input-label {
+  font-size: var(--fluid-input-textarea-text);
+}
+
+.contact__input,
+.contact__text {
+  background-color: var(--bg-icon-img);
+  border: var(--theme-border);
+  color: var(--text-main);
+  font-size: var(--fluid-input-textarea-text);
+
+  padding: var(--pad-gap-margin-md);
+  border-radius: var(--border-radius-md);
+  resize: vertical;
+}
+
+.contact__input:focus,
+.contact__text:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 8px var(--accent-secondary);
+}
+
+.contact__form-submit-btn {
+  background-color: var(--accent-secondary);
+  color: var(--bg-dark);
+  border: none;
+
+  padding: var(--pad-gap-margin-md);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--fluid-input-textarea-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact__form-submit-btn:hover,
+.contact__form-submit-btn:active {
+  background-color: var(--accent-primary);
+}
+
+/*  */
+.contact__section-sub-title-h3 {
+  margin-block-end: 1rem;
+}
+.contact__social-profile {
+  border-radius: var(--border-radius-md);
+  border: var(--theme-border);
+  background-color: var(--bg-icon-img);
+}
+
+.contact__social-profile-list {
+  display: flex;
+  justify-content: center;
+  gap: var(--pad-gap-margin-lg);
+  padding: 1rem;
+}
+
+.contact__social-profile-link {
+  font-size: var(--fluid-contact-social-icon);
+}
+
+.contact__social-profile-link--github:hover,
+.contact__social-profile-link--github:active {
+  color: black;
+}
+
+.contact__social-profile-link--linkedin:hover,
+.contact__social-profile-link--linkedin:active {
+  color: #0a66c2;
+}
+
+.contact__social-profile-link--mail:hover,
+.contact__social-profile-link--mail:active {
+  color: var(--dot-red);
+}
+.contact__social-profile-link .icon--hover {
+  display: none;
+}
+
+.contact__social-profile-link:hover .icon--default,
+.contact__social-profile-link:active .icon--default {
+  display: none;
+}
+
+.contact__social-profile-link:hover .icon--hover,
+.contact__social-profile-link:active .icon--hover {
+  display: inline-block;
+}
+
+/* main > contact end */
+
 /* ---- site-footer start ---- */
 .site-footer {
   grid-area: footer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-icon-img);
+  padding-block: var(--pad-gap-margin-md);
+  border-block-start: var(--theme-border);
+  border-radius: var(--border-radius-sm);
 }
+
+.site-footer p {
+  font-size: var(--fluid-footer-text);
+}
+
+.site-footer p:first-child {
+  color: var(--accent-primary);
+}
+.site-footer p:last-child {
+  color: var(--text-muted);
+}
+
 /* ---- site-footer end ---- */
 
 /* ---- Media Queries start ---- */
@@ -714,6 +845,31 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     gap: var(--pad-gap-margin-xl);
+  }
+
+  /* main > contact */
+
+  .contact__form {
+    inline-size: 100%;
+    max-inline-size: 70%;
+    margin-inline: auto;
+  }
+  .contact__form-submit-btn {
+    inline-size: 100%;
+    max-inline-size: 40%;
+    margin-inline: auto;
+  }
+
+  .contact__social-profile-container {
+    inline-size: 100%;
+    max-inline-size: 70%;
+    margin-inline: auto;
+  }
+
+  /* ---- site - footer ---- */
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 
@@ -785,5 +941,34 @@ body {
     inline-size: 100%;
     max-inline-size: 95%;
     margin-inline: auto;
+  }
+
+  /* main > contact */
+  .contact__form {
+    max-inline-size: 60%;
+  }
+
+  .contact__form-submit-btn {
+    max-inline-size: 30%;
+  }
+
+  .contact__social-profile-container {
+    max-inline-size: 60%;
+  }
+}
+
+/* ---- accessibility (a11y) for vestibular (balance/inner ear) disorders and motion sensitivity.  */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

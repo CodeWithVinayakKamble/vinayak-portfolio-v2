@@ -25,7 +25,8 @@
     <!-- Icons from Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer no-opener" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -500,7 +501,9 @@
                                             <span class="project-card__link-text">Get Code</span>
                                         </a>
                                     </li>
-                                    <li class="project-card__footer-list-item">
+
+                                    <li
+                                        class="project-card__footer-list-item project-card__footer-list-item--portfolio-preview">
                                         <a href="https://codewithvinayakkamble.github.io/vinayak-portfolio-v2/"
                                             class="project-card__link project-card__link--live"
                                             rel="noopener noreferrer" target="_blank">
@@ -518,34 +521,91 @@
             </section>
 
             <!-- Contact -->
-            <section id="contact">
-                <h2>Get in Touch</h2>
-                <form action="#" method="POST">
-                    <label for="username">Enter Your FullName :</label>
-                    <input type="text" id="username" name="username" placeholder="John Doe" required>
+            <section class="contact theme-window" id="contact" aria-labelledby="contact-section">
 
-                    <label for="usermail">Enter Your Mail :</label>
-                    <input type="email" id="usermail" name="usermail" placeholder="johndoe@gmail.com" required>
+                <div class="section-marker">
+                    <span class="section-marker-dot section-marker-dot--red"></span>
+                    <span class="section-marker-dot section-marker-dot--yellow"></span>
+                    <span class="section-marker-dot section-marker-dot--green"></span>
+                </div>
+                <div class="content-body contact__content-body">
 
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                    <h2 class="section__title-h2 contact-section__title-h2" id="contact-section">Get in Touch</h2>
 
-                    <label for="message">Enter Your Message :</label>
-                    <textarea name="usermessage" id="message" rows="5" cols="10"
-                        placeholder="Write Your Message Here..." required></textarea>
+                    <form class="contact__form" action="#" method="POST">
 
-                    <button type="submit">Send Message</button>
-                </form>
+                        <div class="contact__form-group">
+                            <label class="contact__input-label" for="username">Enter Your Full Name :</label>
+                            <input class="contact__input" type="text" id="username" name="username"
+                                placeholder="John Doe" required>
+
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label class="contact__input-label" for="usermail">Enter Your Mail :</label>
+                            <input class="contact__input" type="email" id="usermail" name="usermail"
+                                placeholder="johndoe@gmail.com" required>
+
+                        </div>
+
+                        <div class="contact__form-group">
+                            <label class="contact__input-label" for="message">Enter Your Message :</label>
+                            <textarea class="contact__text" name="usermessage" id="message" rows="5" cols="10"
+                                placeholder="Write Your Message Here..." required></textarea>
+
+
+                        </div>
+
+                        <button class="contact__form-submit-btn" type="submit">Send Message</button>
+
+                    </form>
+
+                    <div class="contact__social-profile-container">
+
+                        <h3 class="section__sub-title-h3 contact__section-sub-title-h3">Social Profile</h3>
+
+                        <div class="contact__social-profile">
+
+                            <ul class="contact__social-profile-list">
+
+                                <li class="contact__social-profile-list-item">
+                                    <a class="contact__social-profile-link contact__social-profile-link--github"
+                                        href="https://github.com/CodeWithVinayakKamble" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </li>
+
+                                <li class="contact__social-profile-list-item">
+                                    <a class="contact__social-profile-link contact__social-profile-link--linkedin"
+                                        href="https://www.linkedin.com/in/vinayak-kamble-105171262/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </li>
+
+                                <li class="contact__social-profile-list-item">
+                                    <a class="contact__social-profile-link contact__social-profile-link--mail"
+                                        href="mailto:vp.kamble2003@gmail.com" target="_blank" rel="noopener noreferrer">
+
+                                        <i class="fa-solid fa-envelope icon--default"></i>
+
+                                        <i class="fa-solid fa-envelope-open icon--hover"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </section>
         </main>
 
         <!-- Footer -->
         <footer class="site-footer">
-            <p>Built with HTML by Vinayak — 2025</p>
-            <ul>
-                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a></li>
-                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
+            <p>&copy; Vinayak Kamble - 2026</p>
+            <p>Made With HTML & CSS</p>
         </footer>
 
     </div>
